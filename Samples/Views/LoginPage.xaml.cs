@@ -22,13 +22,18 @@ namespace Samples.Views
 
             _viewModel = new LoginPageVm();
             this.BindingContext = _viewModel;
+			NavigationPage.SetHasNavigationBar (this, false);
         }
 
         public async void Login(object sender, EventArgs e)
         {
             var success = await _viewModel.Login();
-            if (success)
-                await Navigation.PushAsync(new MenuPage());
+			if (success) {
+				await Navigation.PushAsync (new EmpDirList ());
+
+				Navigation.RemovePage (this);
+
+			}
         }
        
     }

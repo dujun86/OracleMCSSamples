@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+	x:Class="Samples.Views.EmpDirDetail">
+
+	<ContentPage.Content>
+
+		<StackLayout Orientation="Vertical">
+
+			<StackLayout Orientation="Vertical" Padding="15,25,0,0" BindingContext="{Binding EmployeeData}">
+				<Label Text="{Binding FullName}" FontFamily="Helvetica" FontSize="30" TextColor="#225378">
+					<Label.TextColor>
+						<OnPlatform x:TypeArguments="Color" iOS="#225378" Android="White" />
+					</Label.TextColor>
+				</Label>
+				<Label Text="{Binding Title}" FontFamily="Helvetica" FontSize="16" TextColor="Gray"/>
+
+				<StackLayout Orientation="Horizontal" Padding="0,25,0,15">
+					<Image Source="iconemail.png" WidthRequest="24" HeightRequest="24"/>
+					<Label Text="{Binding Email}" FontSize="20" />
+				</StackLayout>
+
+				<StackLayout Orientation="Horizontal" Padding="0,0,0,15">
+					<Image Source="iconphone.png" WidthRequest="24" HeightRequest="24"/>
+					<Label Text="{Binding Phone}" FontSize="20" />
+				</StackLayout>
+
+				<StackLayout Orientation="Horizontal" Padding="0,0,0,15">
+					<Image Source="icontwitter.png" WidthRequest="24" HeightRequest="24" />
+					<Label Text="{Binding Twitter}" FontSize="20" />
+				</StackLayout>
+			</StackLayout>
+
+<!--			<maps:Map WidthRequest="270" HeightRequest="160"
+            	x:Name="MyMap"
+            	MapType="Street"/>-->
+		</StackLayout>
+
+
+
+	</ContentPage.Content>
+</ContentPage>

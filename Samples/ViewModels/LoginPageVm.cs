@@ -53,11 +53,11 @@ namespace Samples.ViewModels
                     return true;
                 }
 
-                OutputMessage = "The username or password was incorrect";
+                OutputMessage = "Invalid username or password.";
             }
             catch (Exception ex)
             {
-                OutputMessage = string.Format("An error occured during the request: {0}", ex.Message);
+                OutputMessage = string.Format("Error: {0}", ex.Message);
             }
             Password = string.Empty;
 

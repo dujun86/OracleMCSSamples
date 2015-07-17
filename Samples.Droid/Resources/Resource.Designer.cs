@@ -3231,52 +3231,64 @@ namespace Samples.Droid
 			public const int Icon = 2130837632;
 			
 			// aapt resource value: 0x7f020081
-			public const int inbox_zero = 2130837633;
+			public const int iconemail = 2130837633;
 			
 			// aapt resource value: 0x7f020082
-			public const int login_screen_placeholder = 2130837634;
+			public const int iconphone = 2130837634;
 			
 			// aapt resource value: 0x7f020083
-			public const int mr_ic_audio_vol = 2130837635;
+			public const int icontwitter = 2130837635;
 			
 			// aapt resource value: 0x7f020084
-			public const int mr_ic_media_route_connecting_mono_dark = 2130837636;
+			public const int inbox_zero = 2130837636;
 			
 			// aapt resource value: 0x7f020085
-			public const int mr_ic_media_route_connecting_mono_light = 2130837637;
+			public const int login_screen_placeholder = 2130837637;
 			
 			// aapt resource value: 0x7f020086
-			public const int mr_ic_media_route_mono_dark = 2130837638;
+			public const int mr_ic_audio_vol = 2130837638;
 			
 			// aapt resource value: 0x7f020087
-			public const int mr_ic_media_route_mono_light = 2130837639;
+			public const int mr_ic_media_route_connecting_mono_dark = 2130837639;
 			
 			// aapt resource value: 0x7f020088
-			public const int mr_ic_pause_dark = 2130837640;
+			public const int mr_ic_media_route_connecting_mono_light = 2130837640;
 			
 			// aapt resource value: 0x7f020089
-			public const int mr_ic_pause_light = 2130837641;
+			public const int mr_ic_media_route_mono_dark = 2130837641;
 			
 			// aapt resource value: 0x7f02008a
-			public const int mr_ic_play_dark = 2130837642;
+			public const int mr_ic_media_route_mono_light = 2130837642;
 			
 			// aapt resource value: 0x7f02008b
-			public const int mr_ic_play_light = 2130837643;
+			public const int mr_ic_pause_dark = 2130837643;
 			
 			// aapt resource value: 0x7f02008c
-			public const int mr_ic_settings_dark = 2130837644;
+			public const int mr_ic_pause_light = 2130837644;
 			
 			// aapt resource value: 0x7f02008d
-			public const int mr_ic_settings_light = 2130837645;
-			
-			// aapt resource value: 0x7f020090
-			public const int notification_template_icon_bg = 2130837648;
+			public const int mr_ic_play_dark = 2130837645;
 			
 			// aapt resource value: 0x7f02008e
-			public const int powered_by_google_dark = 2130837646;
+			public const int mr_ic_play_light = 2130837646;
 			
 			// aapt resource value: 0x7f02008f
-			public const int powered_by_google_light = 2130837647;
+			public const int mr_ic_settings_dark = 2130837647;
+			
+			// aapt resource value: 0x7f020090
+			public const int mr_ic_settings_light = 2130837648;
+			
+			// aapt resource value: 0x7f020094
+			public const int notification_template_icon_bg = 2130837652;
+			
+			// aapt resource value: 0x7f020091
+			public const int powered_by_google_dark = 2130837649;
+			
+			// aapt resource value: 0x7f020092
+			public const int powered_by_google_light = 2130837650;
+			
+			// aapt resource value: 0x7f020093
+			public const int user = 2130837651;
 			
 			static Drawable()
 			{

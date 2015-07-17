@@ -29,6 +29,10 @@ namespace Samples.iOS
 
             global::Xamarin.Forms.Forms.Init();
             
+
+			//
+			// INITIALIZE ORACLE MCS
+			//
             var json = ResourceLoader.GetEmbeddedResourceStream(Assembly.GetAssembly(typeof(AppDelegate)), "McsConfiguration.json");
             MobileBackendManager.Manager.Configuration = new MobileBackendManagerConfiguration(json);
 

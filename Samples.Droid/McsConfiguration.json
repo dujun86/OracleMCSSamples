@@ -2,12 +2,12 @@
     "mobileBackends": {
         "WinBackend": {
             "default": true,
-            "baseUri": "http://baseUri.com",
-            "applicationKey": "applicationKeyTest",
+            "baseUri": "http://unit0422.oracleads.com:7201",
+            "applicationKey": "fa2eff3e-1011-439b-8691-e6498d49704d",
             "authorization": {
                 "basicAuth": {
-                    "backendId": "backendIdTest",
-                    "anonymousToken": "anonymousTokenTest"
+                    "backendId": "507a7f6e-d253-46ac-bac3-4c4d0e7e6afe",
+                    "anonymousToken": "SElQUE9fREVWX01PQklMRV9BTk9OWU1PVVNfQVBQSUQ6bGZsLmRzajk2Y2FnR2k="
                 }
             }
         }

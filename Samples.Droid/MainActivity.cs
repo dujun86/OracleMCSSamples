@@ -39,9 +39,15 @@ namespace Samples.Droid
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
+
+			//
+			//INITIALIZE ORACLE MCS
+			//
             var json = ResourceLoader.GetEmbeddedResourceStream(Assembly.GetAssembly(typeof(MainActivity)), "McsConfiguration.json");
             MobileBackendManager.Manager.Configuration = new MobileBackendManagerConfiguration(json);
+
             CrossPushNotification.Initialize<NotificationsListener>("<ANDROID SENDER ID>");
+
             LoadApplication(new Samples.App());
         }
     }
