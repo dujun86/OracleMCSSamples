@@ -29,14 +29,17 @@ namespace Samples
 		public async Task AllEmployees()
 		{
 			using (var client = App.Backend.CreateHttpClient ()) {
-				
+
+				//
+				// RETRIEVE CONTACTS FROM ORACLE MCS
+				//
 				var response = await client.GetAsync (App.Backend.CustomCodeUri + "/SteveAPI/addresses");
 				response.EnsureSuccessStatusCode ();
 
 				var json = await response.Content.ReadAsStringAsync ();
-
 				JObject jsonobj = JObject.Parse (json);
 
+				// CONVERT JSON TO EMPLOYEE OBJECT
 				Employee[] emp = new Employee[(int)jsonobj["total_rows"]];
 				emp = JsonConvert.DeserializeObject<Employee[]> (jsonobj ["rows"].ToString ());
 				EmployeeList = emp;

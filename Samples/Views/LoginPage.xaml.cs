@@ -28,6 +28,7 @@ namespace Samples.Views
         public async void Login(object sender, EventArgs e)
         {
             var success = await _viewModel.Login();
+
 			if (success) {
 				await Navigation.PushAsync (new EmpDirList ());
 

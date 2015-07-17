@@ -4,6 +4,7 @@ using Xamarin.Forms;
 using System.Threading.Tasks;
 using Samples;
 using Samples.Models;
+using Oracle.Cloud.Mobile.Analytics;
 
 namespace Samples.Views
 {
@@ -21,6 +22,7 @@ namespace Samples.Views
 			//Pull to refresh
 			itemListview.IsPullToRefreshEnabled = true;
 
+			//Refresh data from Oracle MCS
 			itemListview.Refreshing += async (sender, e) => {
 				await _viewModel.AllEmployees();
 				itemListview.ItemsSource = _viewModel.EmployeeList;
@@ -46,7 +48,6 @@ namespace Samples.Views
 				await Navigation.PushAsync(nextPage);
 
 				((ListView)sender).SelectedItem = null;
-
 			};
 		}
 
