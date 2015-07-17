@@ -45,9 +45,14 @@ namespace Samples.ViewModels
             try
             {
 				//
-				// AUTHENTICATE AGAINST ORACLE MCS
+				// AUTHENTICATE BEGIN - ORACLE MCS 
 				//
                 bool success = await App.Backend.Authorization.AuthenticateAsync(UserName, Password);
+				//
+				// AUTHENTICATE END
+				//
+
+
                 if (success)
                 {
                     OutputMessage = string.Empty;

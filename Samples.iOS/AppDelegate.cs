@@ -31,10 +31,14 @@ namespace Samples.iOS
             
 
 			//
-			// INITIALIZE ORACLE MCS
+			// INITIALIZE BEGIN - ORACLE MCS
 			//
             var json = ResourceLoader.GetEmbeddedResourceStream(Assembly.GetAssembly(typeof(AppDelegate)), "McsConfiguration.json");
             MobileBackendManager.Manager.Configuration = new MobileBackendManagerConfiguration(json);
+			//
+			// INITIALIZE END
+			//
+
 
             LoadApplication(new Samples.App());
      

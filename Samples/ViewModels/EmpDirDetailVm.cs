@@ -30,8 +30,14 @@ namespace Samples.ViewModels
 		{
 			var analytics = App.Backend.GetService<Analytics>();
 
-			// Record name of person clicked on
+			//
+			// ANALYTICS EVENT BEGIN
+			//
 			analytics.LogEvent(EmployeeData.FullName);
+			//
+			// ANALYTICS EVENT END
+			//
+
 			await analytics.FlushAsync();
 		}
 	}
