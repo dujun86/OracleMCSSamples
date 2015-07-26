@@ -38,6 +38,8 @@ namespace Samples.Droid
         {
             base.OnCreate(bundle);
 
+			ActionBar.SetIcon(Android.Resource.Color.Transparent);
+
             global::Xamarin.Forms.Forms.Init(this, bundle);
 
 			//

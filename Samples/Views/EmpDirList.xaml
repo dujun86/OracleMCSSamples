@@ -1,31 +1,40 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-	x:Class="Samples.Views.EmpDirList" 
-	Title="Employee Directory" 
-	BackgroundColor="#ACF0F2">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Samples.Views.EmpDirList" Title="Employee Directory" BackgroundColor="#ACF0F2">
 	<ContentPage.Content>
-		<ListView x:Name="itemListview" RowHeight="75" SeparatorVisibility="None" >
+		<ListView x:Name="itemListview" RowHeight="75">
 			<ListView.BackgroundColor>
 				<OnPlatform x:TypeArguments="Color" iOS="White" Android="Black" />
 			</ListView.BackgroundColor>
 			<ListView.ItemTemplate>
 				<DataTemplate>
-					
 					<ViewCell>
+						<!-- Context Actions More/Delete -->
 						<ViewCell.ContextActions>
 							<MenuItem Clicked="OnMore" Text="More" />
 							<MenuItem Clicked="OnDelete" Text="Delete" IsDestructive="True" />
 						</ViewCell.ContextActions>
 						<StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal" Padding="0,2,0,2">
-							<ContentView WidthRequest="71" BackgroundColor="#f16337" Padding="10,10,10,10">
-								<Label Text="{Binding Initials}" TextColor="White" FontSize="44"/>
+
+							<!-- Image -->
+							<ContentView WidthRequest="71">
+								<RelativeLayout>
+									<Image Source="circle.png" RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=10}" RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, Constant=10}" />
+									<Label Text="{Binding Initials}" TextColor="White" Opacity=".8" FontSize="26" XAlign="Center" YAlign="Center" WidthRequest="50" HeightRequest="50" RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=10}" RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, Constant=10}">
+										<Label.FontFamily>
+											<OnPlatform x:TypeArguments="x:String">
+												<OnPlatform.iOS>MAvenir-Light </OnPlatform.iOS>
+												<OnPlatform.Android></OnPlatform.Android>
+											</OnPlatform>
+										</Label.FontFamily>
+									</Label>
+								</RelativeLayout>
 							</ContentView>
 
+							<!-- Name and Title -->
 							<StackLayout Padding="5,10,0,0" VerticalOptions="StartAndExpand" Orientation="Vertical">
 								<Label Text="{Binding FullName}" YAlign="Center" FontSize="Large">
 									<Label.TextColor>
-										<OnPlatform x:TypeArguments="Color" iOS="#225378" Android="White" />
+										<OnPlatform x:TypeArguments="Color" iOS="#2495df" Android="White" />
 									</Label.TextColor>
 								</Label>
 								<Label Text="{Binding Title}" YAlign="Center" FontSize="Small">
@@ -34,9 +43,9 @@
 									</Label.TextColor>
 								</Label>
 							</StackLayout>
+
 						</StackLayout>
 					</ViewCell>
-
 				</DataTemplate>
 			</ListView.ItemTemplate>
 		</ListView>

@@ -7,38 +7,38 @@
 
 	<ContentPage.Content>
 
-		<StackLayout Orientation="Vertical">
 
-			<StackLayout Orientation="Vertical" Padding="15,25,0,0" BindingContext="{Binding EmployeeData}">
-				<Label Text="{Binding FullName}" FontFamily="Helvetica" FontSize="30" TextColor="#225378">
-					<Label.TextColor>
-						<OnPlatform x:TypeArguments="Color" iOS="#225378" Android="White" />
-					</Label.TextColor>
-				</Label>
-				<Label Text="{Binding Title}" FontFamily="Helvetica" FontSize="16" TextColor="Gray"/>
+			<StackLayout Orientation="Vertical">
 
-				<StackLayout Orientation="Horizontal" Padding="0,25,0,15">
-					<Image Source="iconemail.png" WidthRequest="24" HeightRequest="24"/>
-					<Label Text="{Binding Email}" FontSize="20" />
+				<StackLayout Orientation="Vertical" Padding="0,0,0,0" BindingContext="{Binding EmployeeData}">
+
+					<RelativeLayout>
+						<Image Source="detailbackground.png" RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}" RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, Constant=0}" />
+						<Label Text="{Binding FullName}" FontFamily="Helvetica" FontSize="30" TextColor="White" RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=10}" RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, Constant=125}" />
+						<Label Text="{Binding Title}" FontFamily="Helvetica" FontSize="16" TextColor="White" RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=10}" RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, Constant=160}" />
+					</RelativeLayout>
+
+
+					<StackLayout Orientation="Horizontal" Padding="15,25,0,15">
+						<Image Source="iconemail.png" WidthRequest="24" HeightRequest="24"/>
+						<Label Text="{Binding Email}" FontSize="20" />
+					</StackLayout>
+
+					<StackLayout Orientation="Horizontal" Padding="15,0,0,15">
+						<Image Source="iconphone.png" WidthRequest="24" HeightRequest="24"/>
+						<Label Text="{Binding Phone}" FontSize="20" />
+					</StackLayout>
+
+					<StackLayout Orientation="Horizontal" Padding="15,0,0,15">
+						<Image x:Name="twittericon" Source="icontwitter.png" WidthRequest="24" HeightRequest="24" />
+						<Label Text="{Binding Twitter}" FontSize="20" />
+					</StackLayout>
 				</StackLayout>
 
-				<StackLayout Orientation="Horizontal" Padding="0,0,0,15">
-					<Image Source="iconphone.png" WidthRequest="24" HeightRequest="24"/>
-					<Label Text="{Binding Phone}" FontSize="20" />
-				</StackLayout>
-
-				<StackLayout Orientation="Horizontal" Padding="0,0,0,15">
-					<Image Source="icontwitter.png" WidthRequest="24" HeightRequest="24" />
-					<Label Text="{Binding Twitter}" FontSize="20" />
-				</StackLayout>
+	<!--			<maps:Map WidthRequest="270" HeightRequest="160"
+	            	x:Name="MyMap"
+	            	MapType="Street"/>-->
 			</StackLayout>
-
-<!--			<maps:Map WidthRequest="270" HeightRequest="160"
-            	x:Name="MyMap"
-            	MapType="Street"/>-->
-		</StackLayout>
-
-
 
 	</ContentPage.Content>
 </ContentPage>

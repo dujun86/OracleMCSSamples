@@ -27,6 +27,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\GeoLocation.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\EmpDirListVm.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\EmpDirDetailVm.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AniButton.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\LoginPage.xaml">

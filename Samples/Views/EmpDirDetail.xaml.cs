@@ -22,6 +22,12 @@ namespace Samples.Views
 			//Bind data to form
 			this.BindingContext = _viewModel;
 
+
+			//Some entries don't have twitter entries...hide icon in that case
+			if (data.Twitter == null || data.Twitter.Length == 0)
+				twittericon.IsVisible = false;
+
+
 			//Center map on city
 //			MyMap.MoveToRegion(
 //				MapSpan.FromCenterAndRadius(

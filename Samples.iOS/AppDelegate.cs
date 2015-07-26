@@ -31,7 +31,7 @@ namespace Samples.iOS
             
 
 			//
-			// INITIALIZE BEGIN - ORACLE MCS
+			// INITIALIZE BEGIN - ORACLE Mobile Cloud Service
 			//
             var json = ResourceLoader.GetEmbeddedResourceStream(Assembly.GetAssembly(typeof(AppDelegate)), "McsConfiguration.json");
             MobileBackendManager.Manager.Configuration = new MobileBackendManagerConfiguration(json);

@@ -28,10 +28,10 @@ namespace Samples.Views
 				itemListview.ItemsSource = _viewModel.EmployeeList;
 				itemListview.EndRefresh();
 			};
+				
 
 			//Refresh List
 			itemListview.BeginRefresh ();
-
 
 			//Item clicked
 			itemListview.ItemSelected += async (sender, e) =>  {
@@ -39,16 +39,13 @@ namespace Samples.Views
 				if (e.SelectedItem == null) return;
 
 				var selectedData = (Employee)e.SelectedItem;
-
-				//Retrieve geo data
-				//selectedData.GeoLocation = await App.EmpDirClient.GetGeolocation(selectedData.City);
-
 				var nextPage = new EmpDirDetail(selectedData);
 
 				await Navigation.PushAsync(nextPage);
 
 				((ListView)sender).SelectedItem = null;
 			};
+				
 		}
 
 	

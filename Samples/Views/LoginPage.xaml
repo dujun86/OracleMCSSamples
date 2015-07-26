@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Samples.Views.LoginPage">
+             x:Class="Samples.Views.LoginPage"
+             xmlns:local="clr-namespace:Samples">
     <ContentPage.Resources>
  
     </ContentPage.Resources>
@@ -29,17 +30,18 @@
 					HorizontalOptions="Center" 
 					WidthRequest="250">
 				</Entry>
+
 				<Entry Text="{Binding Password}" 
 					IsPassword="true" 
 					Placeholder= "Password" 
 					HorizontalOptions="Center" 
 					WidthRequest="250">
 				</Entry>
-				<Button Text="Login" 
+				<local:AniButton Text="Sign In" 
 					Clicked="Login"
-					HorizontalOptions="Center" 
+					HorizontalOptions="Center" TextColor="White"
 					WidthRequest="250" BackgroundColor="Gray">
-				</Button>
+				</local:AniButton>
 		    	<Label Text="{Binding OutputMessage}"></Label>
 		    </StackLayout>
 		</StackLayout>

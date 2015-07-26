@@ -200,6 +200,8 @@
     <AndroidResource Include="Resources\Drawable\iconemail.png" />
     <AndroidResource Include="Resources\Drawable\iconphone.png" />
     <AndroidResource Include="Resources\Drawable\icontwitter.png" />
+    <AndroidResource Include="Resources\Drawable\detailbackground.png" />
+    <AndroidResource Include="Resources\Drawable\circle.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\AndroidManifest.xml">
