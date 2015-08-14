@@ -33,6 +33,7 @@ namespace Samples
 				//
 				// RETRIEVE CONTACTS FROM ORACLE MCS
 				//
+
 				var response = await client.GetAsync (App.Backend.CustomCodeUri + "/SteveAPI/addresses");
 				response.EnsureSuccessStatusCode ();
 
